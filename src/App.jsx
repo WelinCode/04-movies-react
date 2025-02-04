@@ -1,7 +1,11 @@
+import { FormSearch } from './Components/FormSearch';
+
+const api_url = 'http://www.omdbapi.com/?apikey=a3142094&s=disney';
+const api_key = 'a3142094';
 export const App = () => {
   return (
-    <>
-      <h1>Buscador de Peliculas</h1>
-    </>
+    <div className='app_container'>
+      <FormSearch />
+    </div>
   );
 };
