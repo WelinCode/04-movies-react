@@ -1,10 +1,15 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { useFecth } from '../Hooks/useFecth';
+import { DataContext } from '../Context/DataContext';
 
 export const FormSearch = () => {
   const [title, setTitle] = useState('');
 
+  const { setQuery, error } = useContext(DataContext);
+
   const handledSubmit = (e) => {
     e.preventDefault();
+    setQuery(title);
   };
 
   const onChange = (e) => {
